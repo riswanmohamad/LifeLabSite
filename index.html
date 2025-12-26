@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LifeLab - Free personal development course for students. Unlock your true potential. 20 sessions covering productivity, habits, AI, soft skills and more.">
+    <meta name="keywords" content="personal development, student course, free course, habits, productivity, Tamil, online learning">
+    <title>LifeLab | Unlock Your True Potential</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon">🧪</span>
+                <span class="logo-text">LifeLab</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <!-- Populated by JavaScript -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION WITH IMAGE SLIDER
+         ============================================ -->
+    <section class="hero" id="home">
+        <div class="slider" id="heroSlider">
+            <div class="slider-container" id="sliderContainer">
+                <!-- Slides populated by JavaScript -->
+            </div>
+            <div class="slider-overlay"></div>
+            <div class="slider-controls">
+                <button class="slider-btn prev" id="sliderPrev" aria-label="Previous slide">❮</button>
+                <button class="slider-btn next" id="sliderNext" aria-label="Next slide">❯</button>
+            </div>
+            <div class="slider-dots" id="sliderDots">
+                <!-- Dots populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle">
+                <!-- Populated by JavaScript -->
+            </h1>
+            <p class="hero-tagline" id="heroTagline">
+                <!-- Populated by JavaScript -->
+            </p>
+            <div class="hero-cta">
+                <a href="#register" class="btn btn-primary btn-large" id="heroCta">
+                    <!-- Populated by JavaScript -->
+                </a>
+                <p class="cta-subtext" id="ctaSubtext">
+                    <!-- Populated by JavaScript -->
+                </p>
+            </div>
+            <div class="free-badge">
+                <span class="badge-text">100% FREE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT / PROGRAM HIGHLIGHTS SECTION
+         ============================================ -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose LifeLab?</h2>
+                <p class="section-subtitle">We focus on building <strong>systems and processes</strong>, not just motivation and goals. Every student gets personalized follow-up to track their tiny progress and habit formation.</p>
+            </div>
+            
+            <div class="highlights-grid" id="highlightsGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <div class="target-audience">
+                <h3>Who Is This For?</h3>
+                <div class="audience-cards">
+                    <div class="audience-card">
+                        <span class="audience-icon">🎓</span>
+                        <h4>School Students</h4>
+                        <p>Grade 10 to 13</p>
+                    </div>
+                    <div class="audience-card">
+                        <span class="audience-icon">🚀</span>
+                        <h4>School Leavers</h4>
+                        <p>Anyone ready to grow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         COURSE TOPICS SECTION
+         ============================================ -->
+    <section class="section topics" id="topics">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What You'll Learn</h2>
+                <p class="section-subtitle">12 powerful topics across 20 interactive sessions designed to transform your approach to life and learning.</p>
+            </div>
+            
+            <div class="topics-grid" id="topicsGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         REGISTRATION SECTION
+         ============================================ -->
+    <section class="section register" id="register">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Register Now</h2>
+                <p class="section-subtitle">Secure your spot in the next batch. Remember, it's completely <strong>FREE</strong> and limited to <strong>20 students</strong> per batch!</p>
+            </div>
+            
+            <div class="register-wrapper">
+                <form class="register-form" id="registerForm">
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telephone">Telephone Number <span class="required">*</span></label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="Enter your phone number" required>
+                        <span class="error-message" id="telephoneError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="status">Current Status <span class="required">*</span></label>
+                        <select id="status" name="status" required>
+                            <!-- Populated by JavaScript -->
+                        </select>
+                        <span class="error-message" id="statusError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Languages You Understand <span class="required">*</span></label>
+                        <div class="checkbox-group" id="languageGroup">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                        <span class="error-message" id="languageError"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-submit" id="submitBtn">
+                        <span class="btn-text">Submit Registration</span>
+                        <span class="btn-loading" style="display: none;">Submitting...</span>
+                    </button>
+                    
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+                
+                <div class="register-info">
+                    <div class="info-card">
+                        <h3>📋 What Happens Next?</h3>
+                        <ul>
+                            <li>✅ Submit the form</li>
+                            <li>✅ Receive confirmation call</li>
+                            <li>✅ Get session schedule</li>
+                            <li>✅ Join online sessions</li>
+                            <li>✅ Complete quizzes & activities</li>
+                            <li>✅ Receive your certificate!</li>
+                        </ul>
+                    </div>
+                    <div class="info-card highlight">
+                        <h3>🎁 What You Get</h3>
+                        <ul>
+                            <li>🆓 20 expert-led sessions</li>
+                            <li>🆓 Personalized follow-up</li>
+                            <li>🆓 Interactive quizzes</li>
+                            <li>🆓 Exciting gifts</li>
+                            <li>🆓 Completion certificate</li>
+                            <li>🆓 Lifetime skills!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🧪</span>
+                    <span class="logo-text">LifeLab</span>
+                </div>
+                <p class="footer-tagline" id="footerTagline">
+                    <!-- Populated by JavaScript -->
+                </p>
+                <p class="footer-copyright" id="footerCopyright">
+                    <!-- Populated by JavaScript -->
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
