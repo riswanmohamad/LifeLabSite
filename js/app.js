@@ -1,5 +1,5 @@
 /**
- * LifeLab - Main Application JavaScript
+ * SkillsLab - Main Application JavaScript
  * =====================================
  * Handles: Slider, Navigation, Form, and Dynamic Content Rendering
  */
@@ -230,7 +230,7 @@ function renderHighlights() {
     if (!highlightsGrid) return;
 
     highlightsGrid.innerHTML = programHighlights.map(highlight => `
-        <div class="highlight-card">
+        <div class="highlight-card${highlight.highlighted ? ' highlighted' : ''}">
             <span class="icon">${highlight.icon}</span>
             <h3>${highlight.title}</h3>
             <p>${highlight.description}</p>
@@ -247,13 +247,23 @@ function renderTopics() {
 
     if (!topicsGrid) return;
 
-    topicsGrid.innerHTML = courseTopics.map(topic => `
+    const topicsHtml = courseTopics.map(topic => `
         <div class="topic-card">
             <span class="icon">${topic.icon}</span>
             <h3>${topic.title}</h3>
             <p>${topic.description}</p>
         </div>
     `).join('');
+
+    const moreTopicsCardHtml = `
+        <div class="topic-card highlighted">
+            <span class="icon">✨</span>
+            <h3>More Topics</h3>
+            <p>And many more topics will be covered during the course.</p>
+        </div>
+    `;
+
+    topicsGrid.innerHTML = topicsHtml + moreTopicsCardHtml;
 
     // Add scroll animation
     observeElements('.topic-card');

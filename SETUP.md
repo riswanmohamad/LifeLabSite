@@ -1,4 +1,4 @@
-# LifeLab - Google Sheets Integration Setup Guide
+# SkillsLab - Google Sheets Integration Setup Guide
 
 This guide will help you connect the registration form to a Google Sheet to store all submissions.
 
@@ -8,7 +8,7 @@ This guide will help you connect the registration form to a Google Sheet to stor
 
 1. Go to [Google Sheets](https://sheets.google.com)
 2. Create a new blank spreadsheet
-3. Name it **"LifeLab Registrations"** (or any name you prefer)
+3. Name it **"SkillsLab Registrations"** (or any name you prefer)
 4. In **Row 1**, add these column headers:
    | A | B | C | D | E |
    |---|---|---|---|---|
@@ -28,7 +28,7 @@ This guide will help you connect the registration form to a Google Sheet to stor
 
 ```javascript
 /**
- * LifeLab Registration Form Handler
+ * SkillsLab Registration Form Handler
  * This script receives form submissions and saves them to the Google Sheet
  */
 
@@ -95,7 +95,7 @@ function doGet(e) {
   return ContentService
     .createTextOutput(JSON.stringify({ 
       status: 'success', 
-      message: 'LifeLab Registration API is running!' 
+      message: 'SkillsLab Registration API is running!' 
     }))
     .setMimeType(ContentService.MimeType.JSON);
 }
@@ -124,7 +124,7 @@ function testSetup() {
 
 5. Click **💾 Save** (or Ctrl+S)
 
-6. Name the project: **"LifeLab Form Handler"**
+6. Name the project: **"SkillsLab Form Handler"**
 
 ---
 
@@ -135,7 +135,7 @@ function testSetup() {
 2. Click the **⚙️ gear icon** next to "Select type" and choose **Web app**
 
 3. Configure the deployment:
-   - **Description**: "LifeLab Registration Form Handler"
+  - **Description**: "SkillsLab Registration Form Handler"
    - **Execute as**: "Me" (your email)
    - **Who has access**: **"Anyone"** ⚠️ (Important!)
 
@@ -144,7 +144,7 @@ function testSetup() {
 5. **Authorize the app** when prompted:
    - Click "Authorize access"
    - Choose your Google account
-   - Click "Advanced" → "Go to LifeLab Form Handler (unsafe)"
+  - Click "Advanced" → "Go to SkillsLab Form Handler (unsafe)"
    - Click "Allow"
 
 6. **Copy the Web App URL** that appears:
@@ -232,7 +232,7 @@ Add this code to your Apps Script to receive email notifications for new registr
 ```javascript
 function sendEmailNotification(data) {
   const recipient = 'your-email@example.com'; // Change this
-  const subject = '🎓 New LifeLab Registration: ' + data.name;
+  const subject = '🎓 New SkillsLab Registration: ' + data.name;
   const body = `
 New registration received!
 
@@ -268,4 +268,4 @@ If you encounter issues:
 
 **Setup Complete! 🎉**
 
-Your LifeLab registration form is now connected to Google Sheets.
+Your SkillsLab registration form is now connected to Google Sheets.

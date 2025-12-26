@@ -1,5 +1,5 @@
 /**
- * LifeLab - Stylesheet
+ * SkillsLab - Stylesheet
  * =====================================
  * A colorful, professional, and responsive theme
  */
@@ -547,14 +547,14 @@ input, select, textarea {
     color: var(--dark-light);
 }
 
-/* Free highlight special styling */
-.highlight-card:last-child {
+/* Highlighted cards special styling */
+.highlight-card.highlighted {
     background: var(--gradient-primary);
     color: var(--white);
 }
 
-.highlight-card:last-child h3,
-.highlight-card:last-child p {
+.highlight-card.highlighted h3,
+.highlight-card.highlighted p {
     color: var(--white);
 }
 
@@ -672,6 +672,26 @@ input, select, textarea {
     font-size: 0.9rem;
     color: var(--dark-light);
     line-height: 1.6;
+}
+
+/* Highlighted topic card (e.g., "More Topics") */
+.topic-card.highlighted {
+    background: var(--gradient-primary);
+    border-color: transparent;
+}
+
+.topic-card.highlighted::before {
+    background: var(--white);
+    transform: scaleX(1);
+}
+
+.topic-card.highlighted h3,
+.topic-card.highlighted p {
+    color: var(--white);
+}
+
+.topic-card.highlighted .icon {
+    color: var(--white);
 }
 
 /* Color variations for topic cards - Blue theme */

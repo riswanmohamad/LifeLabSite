@@ -1,5 +1,5 @@
 /**
- * LifeLab - Course Data Configuration
+ * SkillsLab - Course Data Configuration
  * =====================================
  * Edit this file to update course content, topics, and form settings.
  * All data is centralized here for easy management.
@@ -10,9 +10,9 @@ const LifeLabData = {
     // SITE IDENTITY
     // ============================================
     siteInfo: {
-        name: "LifeLab",
-        heroStatement: "Unlock Your True Potential — Become Who You're Meant to Be",
-        tagline: "Discover the confident, focused, and unstoppable version of yourself.",
+        name: "SkillsLab",
+        heroStatement: "Clear Mind. Strong Habits. Better Results.",
+        tagline: "Simple steps, real support, and clear direction — built for students.",
         ctaText: "Start Your Journey — It's FREE!",
         ctaSubtext: "Limited to 20 students per batch • First come, first served"
     },
@@ -32,8 +32,8 @@ const LifeLabData = {
             alt: "Youth working on laptops in modern workspace"
         },
         {
-            url: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80",
-            alt: "Graduation celebration and success"
+            url: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+            alt: "Modern office workspace with cubicles"
         }
     ],
 
@@ -44,7 +44,7 @@ const LifeLabData = {
         totalSessions: 20,
         sessionDuration: "1 to 1.5 Hours",
         mode: "Online",
-        medium: "Tamil (Primary)",
+        medium: "Tamil & Sinhala",
         batchSize: 20,
         price: "Completely FREE",
         certificate: true,
@@ -99,7 +99,7 @@ const LifeLabData = {
             description: "Why processes beat outcomes and how to build reliable systems for success."
         },
         {
-            icon: "🌈",
+            icon: "🧩",
             title: "Different Personalities, Not a Problem",
             description: "Understand personality types and turn diversity into your greatest strength."
         },
@@ -127,42 +127,50 @@ const LifeLabData = {
         {
             icon: "📚",
             title: "20 Sessions",
-            description: "Comprehensive curriculum"
+            description: "Comprehensive curriculum",
+            highlighted: false
         },
         {
             icon: "🕐",
             title: "1-1.5 Hours Each",
-            description: "Focused learning sessions"
+            description: "Focused learning sessions",
+            highlighted: false
         },
         {
             icon: "💻",
             title: "100% Online",
-            description: "Learn from anywhere"
+            description: "Learn from anywhere",
+            highlighted: false
         },
         {
             icon: "🗣️",
-            title: "Tamil Medium",
-            description: "Learn in your language"
+            title: "Tamil & Sinhala",
+            description: "Learn in your own language",
+            highlighted: false
         },
         {
             icon: "👥",
             title: "20 Students/Batch",
-            description: "Personalized attention"
+            description: "Personalized attention",
+            highlighted: false
         },
         {
             icon: "🎁",
             title: "Quizzes & Gifts",
-            description: "Fun interactive learning"
+            description: "Fun interactive learning",
+            highlighted: false
         },
         {
             icon: "📜",
             title: "Certificate",
-            description: "On successful completion"
+            description: "On successful completion",
+            highlighted: false
         },
         {
             icon: "💯",
             title: "100% FREE",
-            description: "No hidden charges"
+            description: "Your future starts here",
+            highlighted: true
         }
     ],
 
@@ -213,7 +221,7 @@ const LifeLabData = {
     // FOOTER CONTENT
     // ============================================
     footer: {
-        copyright: "© 2025 LifeLab. All rights reserved.",
+        copyright: "© 2025 SkillsLab. All rights reserved.",
         tagline: "Empowering students to build better systems for life.",
         socialLinks: [
             // Add your social media links here
