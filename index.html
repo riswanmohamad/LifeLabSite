@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="page-wrapper">
     <!-- ============================================
          NAVIGATION
          ============================================ -->
@@ -89,6 +90,7 @@
 
             <div class="target-audience">
                 <h3>Who Is This For?</h3>
+                <p class="audience-note"><strong>Non-profit pilot initiative:</strong> We’re running SkillsLab as a pilot project to support students and young people with personality development that boosts both <strong>academic performance</strong> and <strong>career progress</strong>. Our goal is your <strong>ultimate success</strong> — a better future with stronger money habits, better health, self-control and discipline, being a responsible citizen, and a happier family life.</p>
                 <div class="audience-cards">
                     <div class="audience-card">
                         <span class="audience-icon">🎓</span>
@@ -219,6 +221,20 @@
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    </div><!-- /.page-wrapper -->
+
+    <!-- More Topics Popup -->
+    <div class="modal" id="topicsModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="topicsModalTitle">
+        <div class="modal-backdrop" id="topicsModalBackdrop"></div>
+        <div class="modal-content" role="document">
+            <button class="modal-close" id="topicsModalCloseTop" type="button" aria-label="Close">×</button>
+            <h3 class="modal-title" id="topicsModalTitle">More Topics</h3>
+            <div class="modal-body">
+                <div class="topics-grid" id="extraTopicsGrid"></div>
+            </div>
+            <button class="btn btn-primary btn-large" id="topicsModalCloseBottom" type="button">Close</button>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/data.js"></script>

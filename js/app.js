@@ -17,6 +17,7 @@ function initializeApp() {
     initializeSlider();
     renderHighlights();
     renderTopics();
+    initializeTopicsModal();
     renderFormOptions();
     renderFooter();
     initializeNavigation();
@@ -256,17 +257,67 @@ function renderTopics() {
     `).join('');
 
     const moreTopicsCardHtml = `
-        <div class="topic-card highlighted">
+        <button class="topic-card highlighted topic-more-btn" id="moreTopicsBtn" type="button" aria-haspopup="dialog" aria-controls="topicsModal">
             <span class="icon">✨</span>
             <h3>More Topics</h3>
-            <p>And many more topics will be covered during the course.</p>
-        </div>
+            <p>Click to view the full list.</p>
+        </button>
     `;
 
     topicsGrid.innerHTML = topicsHtml + moreTopicsCardHtml;
 
     // Add scroll animation
     observeElements('.topic-card');
+}
+
+// ============================================
+// MORE TOPICS POPUP
+// ============================================
+let lastFocusedElementBeforeModal = null;
+
+function initializeTopicsModal() {
+    const openBtn = document.getElementById('moreTopicsBtn');
+    const modal = document.getElementById('topicsModal');
+    const backdrop = document.getElementById('topicsModalBackdrop');
+    const closeTop = document.getElementById('topicsModalCloseTop');
+    const closeBottom = document.getElementById('topicsModalCloseBottom');
+    const extraTopicsGrid = document.getElementById('extraTopicsGrid');
+
+    if (!openBtn || !modal || !backdrop || !closeTop || !closeBottom || !extraTopicsGrid) return;
+
+    const { extraCourseTopics = [] } = LifeLabData;
+    extraTopicsGrid.innerHTML = extraCourseTopics.map(topic => `
+        <div class="topic-card">
+            <span class="icon">${topic.icon}</span>
+            <h3>${topic.title}</h3>
+            <p>${topic.description}</p>
+        </div>
+    `).join('');
+
+    const open = () => {
+        lastFocusedElementBeforeModal = document.activeElement;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        closeTop.focus();
+    };
+
+    const close = () => {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        if (lastFocusedElementBeforeModal && typeof lastFocusedElementBeforeModal.focus === 'function') {
+            lastFocusedElementBeforeModal.focus();
+        }
+    };
+
+    openBtn.addEventListener('click', open);
+    backdrop.addEventListener('click', close);
+    closeTop.addEventListener('click', close);
+    closeBottom.addEventListener('click', close);
+
+    document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') close();
+    });
 }
 
 // ============================================

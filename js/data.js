@@ -121,6 +121,102 @@ const LifeLabData = {
     ],
 
     // ============================================
+    // EXTRA TOPICS (shown only in the popup)
+    // ============================================
+    extraCourseTopics: [
+        {
+            icon: "😌",
+            title: "Stress & Exam Anxiety Control",
+            description: "Simple ways to calm your mind and perform better under pressure."
+        },
+        {
+            icon: "🛌",
+            title: "Sleep & Energy for Students",
+            description: "Improve sleep, energy, and memory with practical daily routines."
+        },
+        {
+            icon: "📵",
+            title: "Phone & Screen Control",
+            description: "Reduce distractions and protect your attention with easy rules."
+        },
+        {
+            icon: "🧱",
+            title: "Beating Procrastination",
+            description: "How to start tasks quickly and keep going even when you don’t feel like it."
+        },
+        {
+            icon: "🎭",
+            title: "Confidence in Real Life",
+            description: "Handle shyness, fear of judgment, and comparison with practical steps."
+        },
+        {
+            icon: "🧘",
+            title: "Emotional Control",
+            description: "Manage anger, sadness, jealousy, and pressure without losing yourself."
+        },
+        {
+            icon: "🧩",
+            title: "Peer Pressure & Bad Influences",
+            description: "Learn to say no, choose good friends, and avoid risky decisions."
+        },
+        {
+            icon: "🛡️",
+            title: "Boundaries & Respect",
+            description: "Build healthy relationships with friends, family, and teachers."
+        },
+        {
+            icon: "🗣️",
+            title: "Public Speaking Basics",
+            description: "Speak clearly, present confidently, and reduce fear in front of others."
+        },
+        {
+            icon: "⚖️",
+            title: "Handling Conflict",
+            description: "Fix misunderstandings, handle arguments, and protect your peace."
+        },
+        {
+            icon: "🧭",
+            title: "Career Direction (Clarity)",
+            description: "Choose a path with confidence and understand what fits you best."
+        },
+        {
+            icon: "📝",
+            title: "CV / Portfolio for Beginners",
+            description: "Show your skills and strengths even with limited experience."
+        },
+        {
+            icon: "🎤",
+            title: "Interview Practice",
+            description: "Answer questions confidently and improve body language and communication."
+        },
+        {
+            icon: "🤝",
+            title: "Networking & Mentors",
+            description: "How to connect with the right people and create opportunities."
+        },
+        {
+            icon: "🧠",
+            title: "Critical Thinking",
+            description: "Avoid scams, fake news, and bad advice by thinking clearly."
+        },
+        {
+            icon: "🧑‍⚖️",
+            title: "Values & Discipline as a Citizen",
+            description: "Responsibility, honesty, integrity, and long-term thinking."
+        },
+        {
+            icon: "🏡",
+            title: "Family Life & Future Responsibilities",
+            description: "Respect, maturity, financial responsibility, and building stability."
+        },
+        {
+            icon: "📌",
+            title: "Decision Making Under Pressure",
+            description: "Make better choices for your future — not just what feels good today."
+        }
+    ],
+
+    // ============================================
     // PROGRAM HIGHLIGHTS (for display cards)
     // ============================================
     programHighlights: [
@@ -222,7 +318,7 @@ const LifeLabData = {
     // ============================================
     footer: {
         copyright: "© 2025 SkillsLab. All rights reserved.",
-        tagline: "Empowering students to build better systems for life.",
+        tagline: "Helping students build habits for academics, career, and life.",
         socialLinks: [
             // Add your social media links here
             // { platform: "facebook", url: "https://facebook.com/yourpage", icon: "📘" },
